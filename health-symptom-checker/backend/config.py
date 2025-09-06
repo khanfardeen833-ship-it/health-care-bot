@@ -17,10 +17,4 @@ API_HOST = os.getenv("API_HOST", "0.0.0.0")
 API_PORT = int(os.getenv("PORT", os.getenv("API_PORT", "8000")))
 
 # CORS Configuration - Allow all origins for deployment
-ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "https://health-symptom-checker.vercel.app",  # Vercel deployment URL
-    "https://*.vercel.app",  # Any Vercel subdomain
-    "https://*.railway.app",  # Any Railway subdomain
-]
+ALLOWED_ORIGINS = ["*"]  # Allow all origins temporarily for testing
