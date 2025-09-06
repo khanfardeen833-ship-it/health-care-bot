@@ -15,8 +15,8 @@ const HealthSymptomChecker = () => {
   const [isWaitingForDescription, setIsWaitingForDescription] = useState(false);
   const messagesEndRef = useRef(null);
   
-  // API Base URL - use environment variable or fallback to localhost
-  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+  // API Base URL - use environment variable or fallback to deployed backend
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://health-care-bot-mk9o.onrender.com';
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
